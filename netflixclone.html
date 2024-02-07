@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India-Watch TV Shows</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/netflix_logo_icon_170919.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            background-image: url(assets/images/background_img.jpg);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-position: center center;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            opacity: 0.5;
+        }
+
+        .seperation {
+            background-color: gray;
+            height: 8px;
+        }
+
+        .seperation2 {
+            background-color: gray;
+            height: 8px;
+            margin-top: 190px;
+        }
+
+        .container>.con1 {
+            width: 80vw;
+
+            height: 50px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .img,
+        .nav-button {
+            position: relative;
+            z-index: 1;
+        }
+
+        .img {
+            margin-top: 40px;
+        }
+
+        .nav-button {
+            height: 30px;
+            width: 75px;
+            margin-top: 40px;
+            margin-left: 15px;
+            border-radius: 5px;
+        }
+
+        .btn-red {
+            background-color: red;
+            border: 1px solid red;
+        }
+
+        .con-content {
+
+            margin-top: 30vh;
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-family: "Poppins", sans-serif;
+            gap: 15px;
+        }
+
+        .con-content>:first-child {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+
+        }
+
+        .con-content>:nth-child(2) {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .con-content>:nth-child(3) {
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .last-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3vh;
+            gap: 5px;
+        }
+
+        .last-content>input {
+            height: 50px;
+            width: 350px;
+            background-color: grey;
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+            padding: 17px;
+
+        }
+
+        .gstart {
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .second {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 75vw;
+            height: 85vh;
+
+            margin: auto;
+        }
+
+        .left {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .left>:first-child {
+            font-size: 48px;
+            font-weight: 900;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .left>:nth-child(2) {
+            font-size: 24px;
+            font-weight: 400;
+            font-family: "Poppins", sans-serif;
+            margin-top: 5px;
+        }
+
+        .tv {
+            width: 500px;
+            position: absolute;
+        }
+
+        .questions {
+
+            width: 75vw;
+            height: 100vh;
+            margin: auto;
+        }
+
+        .heading {
+            color: white;
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            margin-top: 70px;
+        }
+
+        .rollback {
+            margin-top: 10px;
+            width: 75vw;
+            height: 13vh;
+            color: white;
+            background-color: rgb(78, 77, 77);
+
+            display: flex;
+            padding: 18px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .l1 {
+            font-size: 24px;
+            font-weight: 400;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .r1 {
+            font-size: 45px;
+            font-weight: 400;
+        }
+
+        .heading2 {
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 30px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .pappu {
+            position: relative;
+        }
+
+        .saif_vdo {
+            position: absolute;
+            left: 93px;
+            width: 310px;
+            top: 47px;
+        }
+        .saifu{
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="con1">
+            <div class="img">
+                <img src="/assets/logo.svg" alt="" width="150px">
+            </div>
+            <div class="right-button">
+                <button class="nav-button">English</button>
+                <button class="nav-button btn-red">Sign In</button>
+            </div>
+        </div>
+
+        <div class="box"></div>
+
+        <div class="con-content">
+            <div>Unlimited movies, TV shows and more</div>
+            <div>Watch anywhere. Cancel anytime.</div>
+            <div>Ready to watch? Enter your email to create or restart your membership.</div>
+
+            <div class="last-content">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <button class="gstart">Get Started &gt;</button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="seperation"></div>
+
+    <div class="second">
+        <div class="left">
+            <div>Enjoy on your TV</div>
+
+            <div>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</div>
+        </div>
+        <div class="right">
+            <img class="tv" src="/assets/images/tv_img.png" alt="">
+            <video src="/assets/videos/home_vdo.m4v"></video>
+        </div>
+    </div>
+
+    <div class="seperation"></div>
+    <!--  -->
+
+    <div class="second">
+        <div class="right">
+            <img class="iphone" src="/assets/images/iphone_img.jpg" alt="" width="500px">
+
+        </div>
+
+        <div class="left">
+            <div>Download your shows to watch offline</div>
+
+            <div>Save your favourites easily and always have something to watch.</div>
+        </div>
+
+
+    </div>
+
+    <div class="seperation"></div>
+    <!-- 3 -->
+    <div class="second">
+        <div class="left">
+            <div>Watch everywhere</div>
+            <div>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+        </div>
+        <div class="right pappu">
+            <img class="saifu" src="/assets/images/apple_pc.png" alt="" width="500px">
+            <video class="saif_vdo" src="/assets/videos/saif_vdo.m4v" autoplay></video>
+            < </div>
+        </div>
+
+        <div class="seperation"></div>
+        <!--  -->
+        <div class="second">
+            <div class="right">
+                <img class="children" src="/assets/images/children_img.png" alt="" width="500px">
+
+            </div>
+            <div class="left">
+                <div>Create profiles for kids</div>
+
+                <div>Send children on adventures with their favourite characters in a space made just for them—free with
+                    your membership.</div>
+            </div>
+
+        </div>
+
+        <div class="seperation"></div>
+
+        <div class="questions">
+            <div class="heading">Frequently Asked Questions</div>
+            <div class="rollback">
+                <div class="l1">What Is Netflix?</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="rollback">
+                <div class="l1">How Much Does NetFlix Cost?</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="rollback">
+                <div class="l1">Where Can I Watch?</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="rollback">
+                <div class="l1">How Do I Cancel</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="rollback">
+                <div class="l1">What Can I Watch On NetFlix?</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="rollback">
+                <div class="l1">Is Netflix Good For Kids?</div>
+                <div class="r1">&#43;</div>
+            </div>
+            <div class="heading2">
+                Ready to watch? Enter your email to create or restart your membership.
+            </div>
+            <div class="last-content">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <button class="gstart">Get Started ></button>
+            </div>
+        </div>
+
+        <div class="seperation2"></div>
+
+
+</body>
+
+</html>
